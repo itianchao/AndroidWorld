@@ -4,11 +4,7 @@
     android:id="@+id/activity_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/splash"
     tools:context="com.torkuds.androidworld.ui.SplashActivity">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/app_name"/>
 
 </RelativeLayout>
