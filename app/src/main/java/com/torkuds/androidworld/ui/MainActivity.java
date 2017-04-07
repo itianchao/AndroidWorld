@@ -1,7 +1,9 @@
-package com.torkuds.androidworld;
+package com.torkuds.androidworld.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.torkuds.androidworld.R;
 
 public class MainActivity extends AppCompatActivity {
 
