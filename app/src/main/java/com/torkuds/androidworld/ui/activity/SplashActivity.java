@@ -1,33 +1,30 @@
-package com.torkuds.androidworld.ui;
+package com.torkuds.androidworld.ui.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Window;
-import android.widget.RelativeLayout;
 
 
 import com.torkuds.androidworld.R;
+import com.torkuds.androidworld.ui.base.BaseActivity;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-public class SplashActivity extends Activity {
-
-//    @BindView(R.id.activity_splash)
-//    RelativeLayout splashLayout;
+public class SplashActivity extends BaseActivity {
 
     private Handler mHandler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_splash);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+    }
 
-//        ButterKnife.bind(this);
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_splash;
+    }
 
+    @Override
+    protected void initView() {
         //判断用户是否登录，如果没有登陆，跳转到登录页
         //如果已经登录，跳转到主页
         if (true){
@@ -45,7 +42,6 @@ public class SplashActivity extends Activity {
                 }
             }, 800);
         }
-
     }
 
     private void gotoMain() {

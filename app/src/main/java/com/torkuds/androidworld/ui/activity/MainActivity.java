@@ -1,4 +1,4 @@
-package com.torkuds.androidworld.ui;
+package com.torkuds.androidworld.ui.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.torkuds.androidworld.R;
 import com.torkuds.androidworld.ui.adapter.MyAdapter;
+import com.torkuds.androidworld.ui.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * des:主页
+ */
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.swipe_layout)
     SwipeRefreshLayout refreshLayout;
@@ -27,15 +31,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        ButterKnife.bind(this);
-
-        initView();
 
     }
 
-    private void initView(){
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initView(){
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(manager);

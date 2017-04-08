@@ -5,4 +5,7 @@
     <color name="colorAccent">#0195FF</color>
     <color name="colorMain">#0195FF</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="text_light_gray">#999999</color>
 </resources>
