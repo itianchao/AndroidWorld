@@ -15,8 +15,8 @@ import butterknife.ButterKnife;
 
 public class SplashActivity extends Activity {
 
-    @BindView(R.id.activity_splash)
-    RelativeLayout splashLayout;
+//    @BindView(R.id.activity_splash)
+//    RelativeLayout splashLayout;
 
     private Handler mHandler = new Handler();
 
@@ -26,8 +26,7 @@ public class SplashActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);
 
-        ButterKnife.bind(this);
-        splashLayout = (RelativeLayout) findViewById(R.id.activity_splash);
+//        ButterKnife.bind(this);
 
         //判断用户是否登录，如果没有登陆，跳转到登录页
         //如果已经登录，跳转到主页

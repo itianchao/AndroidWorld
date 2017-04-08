@@ -1,8 +1,10 @@
 package com.torkuds.androidworld.ui;
 
+import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -23,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_login);
 
         ButterKnife.bind(this);
@@ -33,5 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     @OnClick(R.id.button_login)
     public void login(){
         Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }
