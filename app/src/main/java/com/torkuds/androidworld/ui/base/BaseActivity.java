@@ -54,4 +54,26 @@ public abstract class BaseActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * 通过Class和RequestCode跳转页面
+     */
+    public void startActivityForResult(Class<?> cls, int requestCode){
+        startActivityForResult(cls, null, requestCode);
+    }
+
+    /**
+     * 通过Class和RequstCode跳转页面，包含Bundle
+     */
+    public void startActivityForResult(Class<?> cls, Bundle bundle, int requestCode){
+        Intent intent = new Intent(this, cls);
+        if (bundle != null){
+            intent.putExtras(bundle);
+        }
+        startActivityForResult(intent, requestCode);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

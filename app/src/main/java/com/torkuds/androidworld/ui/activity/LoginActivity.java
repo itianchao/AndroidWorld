@@ -71,4 +71,9 @@ public class LoginActivity extends BaseActivity {
     public void gotoRegister(){
         startActivity(RegisterActivity.class);
     }
+
+    @OnClick(R.id.tv_login_forgot)
+    public void gotoForgetPassword(){
+        startActivity(ForgetPasswordActivity.class);
+    }
 }
